@@ -1,0 +1,14 @@
+{{ 
+    dbtvault.link(
+        src_pk="hk_a_b",
+        src_fk=[
+            "fk_a",
+            "fk_b"
+        ],
+        src_ldts="loaddate",
+        src_source="source",
+        source_model=[
+            "stg_test_hashed",
+        ]
+    )
+}}

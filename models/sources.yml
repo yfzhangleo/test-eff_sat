@@ -1,0 +1,10 @@
+version: 2
+  
+sources:
+
+  - name: gnpd
+    database: DEV_CHINA_DATA_CENTRIC
+    schema: AHUANG_WORKSHOP
+
+    tables:
+      - name: test

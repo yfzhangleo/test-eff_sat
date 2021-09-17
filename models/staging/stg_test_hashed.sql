@@ -16,7 +16,7 @@
             "source": "!gnpd",
             "is_active": "not _fivetran_deleted",
             "start_date": "loaddate",
-            "end_date": "CASE WHEN not _fivetran_deleted THEN '9999-31-12' ELSE loaddate END",
+            "end_date": "CASE WHEN not _fivetran_deleted THEN '9999-12-31' ELSE loaddate END",
             "effective_from_date": "loaddate",
             "bk_a": "fk_a",
             "bk_b": "fk_b"

@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'ahuang_exercise'
+name: 'test_eff_sat'
 version: '1.0.0'
 config-version: 2
 
@@ -33,10 +33,16 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  ahuang_exercise:
+  test_eff_sat:
     staging:
       +materialized: view
       +tags: staging
-    warehouse:
+    links:
       +materialized: incremental
-      +tags: warehouse
+      +tags: links
+    incremental_eff_sat:
+      +materialized: incremental
+      +tags: test_incermental
+    period_eff_sat:
+      +materialized: vault_insert_by_period
+      +tags: test_period

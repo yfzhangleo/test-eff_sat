@@ -1,7 +1,7 @@
 {{
     dbtvault.stage(
         source_model = {
-            "gnpd": "test"
+            "gnpd": "test_eff_sat"
         },
         hashed_columns = {
             "hk_a": "fk_a",

@@ -1,0 +1,22 @@
+{{
+    config(
+        materialized='vault_insert_by_period',
+        timestamp_field='loaddate',
+        period='day',
+        date_source_models="stg_test_hashed"
+    )
+}}
+
+{{
+    dbtvault.eff_sat(
+        src_pk="hk_a_b",
+        src_dfk=["hk_a"],
+        src_sfk=["hk_b"],
+        src_start_date="start_date",
+        src_end_date="end_date",
+        src_eff="effective_from_date",
+        src_ldts="loaddate",
+        src_source="source",
+        source_model="stg_test_hashed"
+    )
+}}

@@ -36,7 +36,7 @@ models:
   ahuang_exercise:
     staging:
       +materialized: view
-      +tag: staging
+      +tags: staging
     warehouse:
-      +materialized: table
-      +tag: warehouse
+      +materialized: incremental
+      +tags: warehouse
